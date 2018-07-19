@@ -1,0 +1,52 @@
+{
+  "name": "themeisle_cli",
+  "version": "1.0.0",
+  "description": "ThemeIsle CLI",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint src/*",
+    "flow": "flow",
+    "commitmsg": "commitlint -E GIT_PARAMS"
+  },
+  "pre-commit": [
+    "eslint",
+    "flow",
+    "build"
+  ],
+  "keywords": [
+    "ThmeIsle",
+    "CLI",
+    "WordPress",
+    "theme",
+    "plugin",
+    "development"
+  ],
+  "author": "Bogdan Preda",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "cross-env": "^5.2.0",
+    "es2015": "0.0.0",
+    "es2016": "0.0.0",
+    "es2017": "0.0.0",
+    "eslint": "^5.1.0",
+    "eslint-config-google": "^0.9.1",
+    "flow-bin": "^0.76.0",
+    "fsevents": "*",
+    "husky": "^0.14.3",
+    "pre-commit": "^1.2.2"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github-themeisle:preda-bogdan/themeisle_cli.git"
+  }
+}
