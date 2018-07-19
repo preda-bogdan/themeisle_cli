@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "ThemeIsle CLI",
   "main": "lib/index.js",
+  "bin": {
+    "ticli": "./lib/index.js"
+  },
   "scripts": {
     "build": "babel src/ -d lib/",
     "prepublishOnly": "npm run build",
@@ -29,6 +32,7 @@
     "@commitlint/config-conventional": "^7.0.1",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
+    "babel-plugin-shebang": "0.0.0",
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "cross-env": "^5.2.0",

@@ -2,5 +2,6 @@
   "presets": [
     "flow",
     "es2016"
-  ]
+  ],
+  "plugins": ["shebang"]
 }
