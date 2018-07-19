@@ -12,8 +12,7 @@
   },
   "pre-commit": [
     "eslint",
-    "flow",
-    "build"
+    "flow"
   ],
   "keywords": [
     "ThmeIsle",
