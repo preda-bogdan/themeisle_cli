@@ -1,3 +1,10 @@
+/**
+ * Class with methods for interacting with file system.
+ *
+ * @since   1.0.0
+ * @author  Bogdan Preda
+ */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -6,10 +13,10 @@ module.exports = {
 		return path.basename( process.cwd() );
 	},
 
-	directoryExists: (filePath) => {
+	directoryExists: ( filePath ) => {
 		try {
-			return fs.statSync(filePath).isDirectory();
-		} catch (err) {
+			return fs.statSync( filePath ).isDirectory();
+		} catch ( err ) {
 			return false;
 		}
 	},

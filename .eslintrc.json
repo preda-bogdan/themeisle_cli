@@ -1,10 +1,15 @@
 {
-  "extends": [
-    "google", "plugin:flowtype/recommended", "flowtype-essential"
-  ],
-  "plugins": [
-    "flowtype"
-  ],
+	"extends": [
+		"google",
+		"plugin:flowtype/recommended",
+		"flowtype-essential"
+	],
+	"plugins": [
+		"flowtype"
+	],
+	"env": {
+		"jest": true
+	},
 	"rules": {
 		"indent": ["error","tab"],
 		"no-tabs": 0
