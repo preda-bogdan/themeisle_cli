@@ -1,4 +1,4 @@
-
+/* @flow */
 /**
  * Class with methods for interacting with file system.
  *
@@ -11,14 +11,14 @@ const path = require('path');
 
 module.exports = {
 	getCurrentDirectoryBase: () => {
-		return path.basename(process.cwd());
+		return path.basename( process.cwd() );
 	},
 
-	directoryExists: filePath => {
+	directoryExists: ( filePath: string ) => {
 		try {
-			return fs.statSync(filePath).isDirectory();
-		} catch (err) {
+			return fs.statSync( filePath ).isDirectory();
+		} catch ( err ) {
 			return false;
 		}
-	}
+	},
 };
