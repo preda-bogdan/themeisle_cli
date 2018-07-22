@@ -77,6 +77,34 @@ module.exports = {
 			},
 		];
 
-		return inquirer.prompt(questions);
+		return inquirer.prompt( questions );
+	},
+
+	askProjectType: () => {
+		const choices = [
+			{
+				name: 'WordPress Plugin',
+				value: 'wp-plugin',
+			},
+			{
+				name: 'WordPress Theme',
+				value: 'wp-theme',
+			},
+			{
+				name: 'Generic PHP',
+				value: 'php-generic',
+			},
+		];
+
+		const questions = [
+			{
+				name: 'project-choice',
+				type: 'list',
+				message: 'What project template would you like to generate?',
+				choices: choices,
+			},
+		];
+
+		return inquirer.prompt( questions );
 	},
 };

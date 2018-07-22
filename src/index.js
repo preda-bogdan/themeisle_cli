@@ -7,6 +7,8 @@ const figlet = require('figlet');
 const github = require('./github/github');
 const repo = require('./github/repo');
 
+const inquirer = require('./console/inquirer');
+
 clear();
 console.log(
 	chalk.yellow(
@@ -30,6 +32,14 @@ const getGithubToken = async () => {
 };
 
 const run = async () => {
+	let response = await inquirer.askProjectType();
+	console.log( response['project-choice'] );
+	if ( response['project-choice'] === 'wp-plugin' ) {
+		const projects = require('./projects/make_plugin');
+		projects.makePlugin();
+	}
+	return true;
+
 	try {
 		// Retrieve & Set Authentication Token
 		const token = await getGithubToken();
